@@ -36,6 +36,7 @@
   text-align: left;
   width: 100%;
   border:0;
+  background-color:white;
 }
 .weather-icon{
   z-index: 0;
