@@ -34,14 +34,20 @@ $(document).ready(function () {
         throw new Error("No matching countries found");
       }
     } catch (error) {
-      console.log(error.message);
+      $(".country").hide();
     }
   }
 
   const cityvalue = $("#search");
   $(".search").on("keyup", async () => {
     const searchChar = cityvalue.val();
-    await countryname(searchChar);
+    if (searchChar.length > 0) {
+      await countryname(searchChar);
+    }
+    else {
+      $(".country").hide();
+    }
+
   });
 
 
